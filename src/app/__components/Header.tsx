@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
+import { MobileMenu } from "./MobileMenu";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,11 +25,11 @@ const Header = () => {
             : "bg-background text-foreground"
         } fixed top-0 left-0 py-3 right-0 px-[109.5px] transition-all delay-50 hover:bg-foreground ease-linear  duration-[0.3s] `}
       >
-        <nav className="pt-1 pb-2 gap-[30px] min-h-[65px] flex xl:min-h-[unset] navbar">
+        <nav className="pt-1 pb-2 gap-[30px] min-h-[65px] flex xl:min-h-[unset] navbar justify-between">
           <Link href={"/"} className="pt-1">
             <Logo scrolled={scrolled} />
           </Link>
-          <div className="flex items-center justify-between pt-[9px] w-full">
+          <div className="items-center justify-between pt-[9px] w-full hidden lg:flex">
             <ul
               aria-label="Navigation drawer"
               className="flex items-center  gap-7  group-hover:text-background text-[15px] delay-50 duration-[0.3s] ease-linear"
@@ -42,7 +43,9 @@ const Header = () => {
               <li>
                 <Link href="/#platforms">Platforms</Link>
               </li>
-              <li><Link href={"/#customers"} >Customers</Link></li>
+              <li>
+                <Link href={"/#customers"}>Customers</Link>
+              </li>
             </ul>
             <div>
               <Link
@@ -54,6 +57,7 @@ const Header = () => {
               </Link>
             </div>
           </div>
+          <MobileMenu/>
         </nav>
       </div>
     </header>
