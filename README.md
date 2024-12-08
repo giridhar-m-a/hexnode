@@ -14,5 +14,5 @@ npm run build
 ### to start the app
 
 ```bash
-npm start
+npm run start
 ```
