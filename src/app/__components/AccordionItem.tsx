@@ -81,8 +81,9 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
   return (
     <div className="flex items-start flex-col lg:flex-row justify-between md:pt-[50px]">
       <div
-        className="shrink-0 md:w-[46%] md:max-w-[600px] h-full max-h-[565px] relative overflow-hidden"
-        style={{ position: "sticky", top: "74px" }}
+        // className="shrink-0 md:w-[46%] md:max-w-[600px] max-h-[565px] relative overflow-hidden"
+        // style={{ position: "sticky", top: "74px" }}
+        
       >
         <Image
           src={PLATFORM_IMAGES[imageIndex]}
@@ -90,11 +91,11 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
           height={565}
           width={600}
         />
-        <div
+        {/* <div
           className="slick-slider tabSlider slick-vertical slick-initialized"
           dir="ltr"
         >
-          <div className="slick-list" style={{ height: "571px" }}>
+          <div className="slick-list">
             <div
               className="rounded-[20px] overflow-hidden transition-all duration-300 ease-out !opacity-0"
               style={{ width: "100%", display: "inline-block" }}
@@ -104,12 +105,13 @@ const Accordion: React.FC<AccordionProps> = ({ items }) => {
                 alt="platforms"
                 height={565}
                 width={600}
+                className="p-4 lg-p-0"
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div className="md:w-[54%] md:max-w-[700px] shrink-0 w-full relative pl-[40px]">
+      <div className="md:w-[54%] md:max-w-[700px] shrink-0 w-full relative lg:pl-[40px]">
         {items.map((item, i) => (
           <>
             <AccordionItem
