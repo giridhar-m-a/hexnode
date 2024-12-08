@@ -3,19 +3,66 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: hsl(219.13, 85.19%, 5.29%);
+  --foreground: hsl(0, 0%, 100%);
+  --button: hsl(347, 94%, 45%);
+  --button-accent: hsl(355, 66%, 40%);
+  --text-accent: hsla(220, 5%, 76%, 0.6);
+  --border-color: hsl(220, 13%, 91%);
+  --text-dark: hsla(0, 0%, 100%, 0.75);
+  --bg-accent: hsl(232.94, 24.64%, 13.53%);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: rgb(20, 10, 25);
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+  /* a {
+    @apply text-text_accent;
+  } */
+
+  .whyHexnode_resourceTransitionKit__BGUBE {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .slick-list,
+  .slick-slider {
+    position: relative;
+    display: block;
+  }
+  .slick-slider {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .slick-list {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: block;
+  }
+  .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cusreviewslider_hide-scrollbar__lQqUC {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
